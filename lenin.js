@@ -1,9 +1,9 @@
 $( document ).ready(function() {
   $('#lenin').mouseenter(function(){
-    $('#lenin').text(" ͡° ͜ʖ ͡°");
+    $('#lenin').text("OwO");
   })
 
   $('#lenin').mouseleave(function(){
-    $('#lenin').text(" ͡° ͟ʖ ͡°");
+    $('#lenin').text("O_O");
   })
 });
