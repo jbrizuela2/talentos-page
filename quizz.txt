@@ -1,0 +1,89 @@
+1. Cuantos tamaños de header hay?
+a) 3 
+b) 5 
+c) 6
+d) Los que quepan en tu corazón
+
+2. Cual es la etiqueta correcta en HTML Para insertar un salto de linea?
+a) <nl>
+b) <br>
+c) <line>
+d) No hay, solo picale enter :v
+
+3. Que símbolo se utiliza para cerrar una etiqueta?
+a) *
+b) /
+c) >
+d) ( ͡° ͜ʖ ͡°)
+
+ 4. Si quieres crear una lista enumerada, con que etiqueta lo logras?
+a) <ul>
+b) <ol>
+c) <list>
+d)  <siri_has_una_lista_enumerada_pls>
+
+5. Como se hace un comentario en html?
+a) # Texto
+b)  // Texto
+c) <!— Texto  —>
+d) Con cuidado para no ofender a nadie uwu
+
+6. Que es una página estática?
+a) Aquella que solo muestra contenido, sin funcionalidad
+b) La de arriba x2
+c) La de arriba x3
+d) La que te da toques cuando la abres
+
+7. Que etiqueta se usa para agregar un link a un texto, o imagen?
+a) <href>
+b) <a>
+c) <link>
+d) <zelda>
+
+8. Que etiqueta se usa para definir el encabezado de nuestro documento?
+a) <h1>
+b) <head>
+c) <header>
+d) <headeder>
+
+9. Si creo un selector en CSS #lista, a que le estoy agregando propiedades?
+a) A los elementos de la clase lista
+b) A los elementos con el id lista
+c) A las listas de mi pagina
+d) A las listas del salon
+
+10. Dentro del documento HTML, donde es mejor definir el estilo con CSS?
+a) En <body>
+b) En <head>
+c) En  cada elemento
+d) En ningún lugar, el estilo esta dentro de ti
+
+11. Si creo un selector en CSS .contenedor_primario, a que le estoy agregando propiedades?
+a) A los elementos de la clase contenedor_primario
+b) A los elementos con el id contenedor_primario
+c) A toda las etiquetas que contengan algo
+d) A todos los contenedores de las primarias de México
+
+12 . Que etiqueta se usa para crear divisiones dentro de mi documento HTML?
+a) <container>
+b) <div>
+c) <class>
+d) <÷>
+
+13. Con que etiqueta puedo agregar una imágen?
+a) <pic>
+b) <png>
+c) <img>
+d) <ellanoteama>
+
+14. Cual de estos NO es una referencia válida para un link?
+a) <a href=“#”>
+b) <a href=“http://www.juan-brizuela.herokuapp.com”>
+c) <a href=“img/foto_mona.jpg”>
+d) Ninguna, todas son válidas
+
+15. Quién es el profe más chido del club de programación?
+a) Héctor Guedéa
+b) Juan Brizuela
+c) No puedes comparar, dado que los métodos de enseñanza son diferentes, al igual que su experiencia y su especialización dentro del campo programación, pero Héctor es mas chido porque si termino la carrera :’v
+d) No puedes comparar, dado que los métodos de enseñanza son diferentes, al igual que su experiencia y su especialización dentro del campo programación, pero Juan es mas chido porque es de Michelada uwu
