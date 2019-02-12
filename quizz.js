@@ -16,6 +16,20 @@ $( document ).ready(function() {
     if($("#right_answer" + current).is(':checked')){
       wenas++;
       updateScore();
+    }else if(current == 15){
+      var ans;
+      if($('#r1').is(':checked')){
+        ans = "Dijo que hector es mejor >:v";
+      }else if($('#r2').is(':checked')){
+        ans = "Es bien barbero, y dijo que tu eres mejor :3";
+      }else if($('#r3').is(':checked')){
+        ans = "No se que dijo, pero en conclusion tu por ser de miche <3";
+      }else if($('#r4').is(':checked')){
+        ans = "Dice que te pongas a terminar la universidad :v";
+      }
+      console.log(ans);
+      wenas++;
+      updateScore();
     }else{
       removeHeart();
     }
