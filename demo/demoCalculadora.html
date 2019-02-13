@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo calculadora</title>
+  </head>
+  <body>
+    <!-- Select de las operaciones-->
+    <select id="operaciones">
+      <option value="sumar">Sumar</option>
+      <option value="restar">Restar</option>
+      <option value="multiplicar">Multiplicar</option>
+      <option value="dividir">Dividir</option>
+    </select>
+    <br />
+    <!-- Número 1-->
+    <label for="n1">Número 1</label>
+    <input type="text" name="n1" id="n1" value="0" maxlength="4">
+    <br />
+    <!-- Número 1-->
+    <label for="n1">Número 2</label>
+    <input type="text" name="n2" id="n2" value="0" maxlength="4">
+    <!-- Aqui se mostrará el resultado-->
+    <h1 id="resultado">Resultado:</h1>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    //El documento se termina de cargar
+    $( document ).ready(function() {
+      //Proceso resultado cuando se cambia el focus de mis cajas de texto
+      $('input#n1, input#n2').on('focusout', function(){
+        procesarResultado();
+      });
+
+      //Proceso resultado cuando se el valor de mi <select>
+      $('select#operaciones').on('change', function(){
+        procesarResultado();
+      });
+
+      //Borro el contenido de mis cajas de texto cuando obtienen el focus
+      $('input#n1').on('focusin', function(){
+        $('input#n1').val("");
+      });
+
+      $('input#n2').on('focusin', function(){
+        $('input#n2').val("");
+      });
+    })
+
+    //Obtengo mis variables numéricas de sus cajas de texto,
+    //Llamo a mi función para calcular el resultado
+    //Imprimo el resultado
+    function procesarResultado(){
+      var n1 = parseInt($('input#n1').val());
+      var n2 = parseInt($('input#n2').val());
+      var resultado = calcular(n1, n2);
+      $('h1#resultado').text("Resultado: " + resultado);
+    }
+    
+    //Dependiendo del valor seleccionado en mi <select>
+    //realizo la operación que le corresponde
+    function calcular(n1, n2){
+      var text = $('#operaciones :selected').text();
+      switch($('#operaciones :selected').val()){
+        case "sumar":
+          return n1 + n2;
+          break;
+        case "restar":
+          return n1 - n2;
+          break;
+        case "multiplicar":
+          return n1 * n2;
+          break;
+        case "dividir":
+          return n1 / n2;
+          break;
+      }
+    }
+  </script>
+ </html>
+
+

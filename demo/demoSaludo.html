@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo eventos</title>
+  </head>
+  <body>
+    <!-- Aqui va el texto del usuario-->
+    <label for="text">Nombre</label>
+    <input type="text" name="text" id="myText">
+    <!-- Botón que iniciará la acción-->
+    <input type="button" id="submit" value="Cambiar">
+    <!-- Aqui se mostrará el valor ingresado-->
+    <h1 id="salu2">Ingresa tu nombre forastero</h1>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    //El documento se termina de cargar
+    $( document ).ready(function() {
+      //Evento que se manda a llamar cada que presiono el botón submit
+      $('input#submit').click(function(){
+        var nombre = $('input#myText').val();
+        $('h1#salu2').text("Salu2 " + nombre);
+        $('input#myText').val("");
+      });
+    })
+  </script>
+ </html>
+
+ 

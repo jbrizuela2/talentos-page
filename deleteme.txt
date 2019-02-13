@@ -1,0 +1,55 @@
+
+$(document).ready(function(event){ 
+  // jQuery code 
+});
+
+  
+function assignScore(){
+  var score = $('h2 #coins').text();
+  alert("Tu puntuación final es" + score);
+  $('.maximaPuntuacion label').val(score);
+}
+  
+//Ejercicio Manipulación del DOM
+$('.container');        //Clase "container" 
+  <div class="container"> </div>
+
+$('#coins');            //Elemento con id "coins"
+  <img id="coins" href="img/coin.svg"> </img>
+
+$('h1, p');             //Elementos de tipo <h1> y <p>
+  <h1>Oremos!</h1>
+  <p>Lorem ipsum dolor sit amet</p>
+
+$('.message h3');       //Elementos de <h3> de la clase message
+  <div class="message">   
+    <h3>Hay un error en la matrix!</h3>
+  </div>                        
+
+$('li a');              //Elementos de tipo <a> dentro de un <li>
+  <ol>
+    <li><a href="#titulo">Curriculum</a></li>
+    <li><a href="#hobbies">Intereses</a></li>
+  </ol>
+
+$('#error, #success');  //Elementos que tengan el id "error" y/o "success"
+  <h3 id="error">Este es un mensaje de error</h3>
+  <h2 id="success">Este es un mensaje de éxito :D</h2>
+
+$('a[href="#inicio"]'); //Elementos de tipo <a> que el atributo "href=#inicio"
+  <a href="#inicio">Volver a inicio</a>
+
+
+$('h1 span').css('font-size', 'normal');
+
+$('div').css({
+  fontSize: '13px', 
+  background: '#f60'
+});
+
+$('header').height(200);
+
+$('.extend').height(30 + 'em');
+
+
+
