@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo efectos</title>
+    <style>
+      body {
+        font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+      }
+      .panel {
+        border-top: 2px solid #9799a7;
+      }
+      .panel-stage {
+        border-radius: 0 0 6px 6px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+        display: none;
+        height: 80px;
+        margin: 0 auto;
+        width: 80%;
+      }
+      .panel-tab {
+        background: linear-gradient(#fff, #f4f5f4);
+        border: 1px solid #dedede;
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        color: #0087cc;
+        display: block;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 5px 0;
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 80px;
+      }
+      .panel-tab:hover {
+        color: #ff7b29;
+      }
+      .panel-tab span {
+        font-size: 9px;
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="panel-stage" style="display:none;">
+        <p>Hola que hace?</p>
+      </div>
+      <a href="#" class="panel-tab">Abrir <span>&#9660;</span></a>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    //El documento se termina de cargar
+    $( document ).ready(function() {
+      //Evento para nuestro botón "Abrir"
+      $('.panel-tab').on('click', function(event){
+        //Se ejecuta la animación de slide
+        $('.panel-stage').slideToggle('slow', function(event){
+          if($(this).is(':visible')){
+            $('.panel-tab').html('Cerrar <span>&#9650;</span>');
+            $('.panel-tab').css('color','orange');
+          } else {
+            $('.panel-tab').html('Abrir <span>&#9660;</span>');
+            $('.panel-tab').css('color','green');
+          }
+        });
+      });
+    });
+  </script>
+</html>

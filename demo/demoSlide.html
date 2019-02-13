@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo efectos</title>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="panel-stage" style="display:none;">
+        <p>Hola que hace?</p>
+      </div>
+      <a href="#" class="panel-tab">Abrir <span>&#9660;</span></a>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    //El documento se termina de cargar
+    $( document ).ready(function() {
+      //Evento para nuestro botón "Abrir"
+      $('.panel-tab').on('click', function(event){
+        //Se ejecuta la animación de slide
+        $('.panel-stage').slideToggle('slow', function(event){
+          if($(this).is(':visible')){
+            $('.panel-tab').html('Cerrar <span>&#9650;</span>');
+            $('.panel-tab').css('color','orange');
+          } else {
+            $('.panel-tab').html('Abrir <span>&#9660;</span>');
+            $('.panel-tab').css('color','green');
+          }
+        });
+      });
+    });
+  </script>
+</html>
+
