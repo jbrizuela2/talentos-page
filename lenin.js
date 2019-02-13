@@ -6,4 +6,10 @@ $( document ).ready(function() {
   $('#lenin').mouseleave(function(){
     $('#lenin').text("O_O");
   })
+
+  $('#lenin').click(function(){
+    alert("adios uwu");
+    $(this).fadeOut('slow');
+    $(this).delay(5000).fadeIn(5000);
+  });
 });

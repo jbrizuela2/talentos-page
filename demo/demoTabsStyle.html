@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo tabs</title>
+    <style>
+      body {
+        color: #666;
+        font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+      }
+      ul{
+        list-style: none;
+      }
+      .tabs {
+        max-width: 538px;
+      }
+      .tabs-nav li {
+        float: left;
+        width: 50%;
+      }
+      .tabs-nav li:first-child a {
+        border-right: 0;
+        border-top-left-radius: 6px;
+      }
+      .tabs-nav li:last-child a {
+        border-top-right-radius: 6px;
+      }
+      a {
+        background: #eaeaed;
+        border: 1px solid #cecfd5;
+        color: #0087cc;
+        display: block;
+        font-weight: 600;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #ff7b29;
+      }
+      .tab-active a {
+        background: #fff;
+        border-bottom-color: transparent;
+        color: #2db34a;
+        cursor: default;
+      }
+      .tabs-stage {
+        border: 1px solid #cecfd5;
+        border-radius: 0 0 6px 6px;
+        border-top: 0;
+        clear: both;
+        padding: 24px 30px;
+        position: relative;
+        top: -1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <ul class="tabs-nav">
+        <li><a href="#tab-1">Características</a></li>
+        <li><a href="#tab-2">Detalles</a></li>
+      </ul>
+      <div class="tabs-stage">
+        <div id="tab-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec neque nisi, dictum aliquet lectus.</p>
+        </div>
+        <div id="tab-2">
+          <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    //El documento se termina de cargar
+    $( document ).ready(function() {
+      // Mostrar la primer tab por defecto
+      $('.tabs-stage div').hide();
+      $('.tabs-stage div:first').show();
+      $('.tabs-nav li:first').addClass('tab-active');
+
+      // Cambiar las clases de cada tab y mostrar la actual
+      $('.tabs-nav a').on('click', function(event){
+        //La clase tab-active es la que muestra el fondo de un color
+        //y el texto de otro. Al quitarsela, hacemos que se cree un 
+        //efecto visual que hace saber al usuario que sección está viendo
+        $('.tabs-nav li').removeClass('tab-active');
+        $(this).parent().addClass('tab-active');
+        //Esconde todo el texto del contenedor
+        $('.tabs-stage div').hide();
+        //Muestra el contenido referido en el elemento
+        //que mandó a llamar ésta función.
+        $($(this).attr('href')).show();
+      });
+    });
+  </script>
+</html>
+
+

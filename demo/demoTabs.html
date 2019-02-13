@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo tabs</title>
+  </head>
+  <body>
+    <div class="tabs">
+      <ul class="tabs-nav">
+        <li><a href="#tab-1">Características</a></li>
+        <li><a href="#tab-2">Detalles</a></li>
+      </ul>
+      <div class="tabs-stage">
+        <div id="tab-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec neque nisi, dictum aliquet lectus.</p>
+        </div>
+        <div id="tab-2">
+          <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    //El documento se termina de cargar
+    $( document ).ready(function() {
+      // Mostrar la primer tab por defecto
+      $('.tabs-stage div').hide();
+      $('.tabs-stage div:first').show();
+      $('.tabs-nav li:first').addClass('tab-active');
+
+      // Cambiar las clases de cada tab y mostrar la actual
+      $('.tabs-nav a').on('click', function(event){
+        //La clase tab-active es la que muestra el fondo de un color
+        //y el texto de otro. Al quitarsela, hacemos que se cree un 
+        //efecto visual que hace saber al usuario que sección está viendo
+        $('.tabs-nav li').removeClass('tab-active');
+        $(this).parent().addClass('tab-active');
+        //Esconde todo el texto del contenedor
+        $('.tabs-stage div').hide();
+        //Muestra el contenido referido en el elemento
+        //que mandó a llamar ésta función.
+        $($(this).attr('href')).show();
+      });
+    });
+  </script>
+</html>
+
+
